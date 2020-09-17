@@ -1,0 +1,91 @@
+body {
+  background-color: white;
+}
+
+.top {
+  position: absolute;
+  width: 1400px;
+  height: 230px;
+  left: calc(50% - 1400px/2);
+  top: -115px;
+  border-radius: 26px;
+}
+ellipse {
+  position: absolute;
+  left: -16.21%;
+  right: 0%;
+  top: 18.26%;
+  bottom: 17.39%;
+background: #6EC98F;
+}
+
+
+.logo {
+  position: absolute;
+  left: 14.5%;
+  right: 70.43%;
+  top: 56.96%;
+  bottom: 25.22%;
+}
+.logoname {
+  position: absolute;
+  left: 17.71%;
+  right: 70.43%;
+  top: 56.96%;
+  bottom: 25.22%;
+}
+
+/*FANTASY*/
+ul {
+  color: white;
+  text-decoration: none;
+  list-style-type: none;
+}
+li { 
+  margin: 15px;
+  float: left ;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.menu {
+  position: absolute;
+  left: 43.79%;
+  right: 20.64%;
+  top: 61.3%;
+  bottom: 29.13%;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.maintext {
+  position: absolute;
+  width: 578px;
+  height: 123px;
+  left: calc(50% - 578px/2);
+  top: 285px;
+}
+/* headers/h1 */
+h1 {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+
+color: #000000;
+}
+
+.etcmenu {
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
