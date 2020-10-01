@@ -1,0 +1,149 @@
+body {
+    background-image: url(bigback.png);
+    /*backdrop-filter: blur(2px);*/
+  }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background: #0095EF;
+    min-width: 320px;
+}
+
+
+ul {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    position: static;
+    left: 21.43%;
+    right: 21.43%;
+    top: 8.33%;
+    bottom: 8.33%;
+    height: 72px;
+/* Inside Auto Layout */
+    align-self: center;
+}
+
+nav ul {
+    display: flex;
+}
+nav li {
+    padding: 30px;
+    flex: none;
+    
+}
+nav .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    padding: 0px 300px;
+    left: 0%;
+    right: 79.22%;
+    top: 0%;
+    bottom: 0%;
+    order: 0;
+    align-self: center;
+    flex-grow: 0;
+}
+
+nav .logoname {
+    position: relative;
+    flex: none;
+    order: 0;
+    align-self: center;
+    flex-grow: 0;
+    padding: 15px 15px 15px 0px;
+    color: #FFFFFF;
+}
+
+nav .logoimg {
+    position: static;
+    width: 50px;
+    height: 50px;
+    flex: none;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    padding: 15px 0px 15px 15px;
+}
+
+.nav_container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    background: #0095EF;
+    
+}
+
+nav .nav_but {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    
+    position: static;
+    width: 569px;
+    left: 528px;
+    top: 14.5px;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    margin: 0px 300px 0px 0px;
+}
+
+
+
+.startup_text {
+    /* startup_text */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+
+    position: absolute;
+    width: 1156px;
+    height: 317px;
+    left: calc(50% - 1156px/2);
+    top: 438px;
+}
+
+h1 {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+
+    color: #000000
+}
+
+a {
+    font-family: Ubuntu;
+    font-style: normal;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav_text {
+    font-family: Ubuntu;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+}
