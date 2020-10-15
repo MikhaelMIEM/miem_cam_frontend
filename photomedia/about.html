@@ -24,7 +24,26 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                                <style>
+                                button {
+                                    padding: 8px 16px;
+                                }
+
+                                video {
+                                    width: 100%;
+                                }
+
+                                #media {
+                                    max-width: 1280px;
+                                }
+                                </style>
+
 </head>
+
+
 
 <body>
     <!--[if lte IE 9]>
@@ -101,54 +120,32 @@
     </header>
     <!-- header-end -->
 
-    <!-- about_area_start -->
+
+    <!-- -->
     <div class="about_area">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12">
-                    <div class="about_text">
-                        <h3>Lost Is Just a Four Letter Word</h3>
-                        <p class="about_text_1">For man shall him gathering image dry gathering which cattle. Said
-                            second fruit dry Upon cattle sixth lights herb gathered second that night sea his blessed he
-                            us meat Seed void. Day saw him days itself lights. Give waters multiply earth very brought
-                            replenish open itself multiply upon cattle she’d rule make doesn’t lights together I let
-                            heaven which for land saw grass our was unto face brought seed dry moving was, were great.
-                            Our won’t dry herb set over. Seasons earth upon fill it after. Shall she’d hath so which
-                            seas to </p>
-                        <p class="about_text_2">
-                            For man shall him gathering image dry gathering which cattle. Said second fruit dry Upon
-                            cattle sixth lights herb gathered second that night sea his blessed he us meat Seed void.
-                            Day saw him days itself lights. Give waters multiply earth very brought replenish open
-                            itself multiply upon cattle
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-12">
-                    <div class="about_thumb">
-                        <img src="img/about/banner.png" alt="">
-                    </div>
-                </div>
-                <div class="about_details">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <p>For man shall him gathering image dry gathering which cattle. Said second fruit dry
-                                    Upon cattle sixth lights herb gathered second that night sea his blessed he us meat
-                                    Seed void. Day saw him days itself lights.</p>
+                                
+                            <div>
+                            <h1>Enter server link</h1>
+                            <input id="server_link" type="text" placeholder="Server link" value="http://92.53.78.98:8181/media/c"/>
+                            <button id="start" onclick="start()">Start</button>
+                            <button id="stop" style="display: none" onclick="stop()">Stop</button>
+
+                            <div id="media">
+                                <h2>Media</h2>
+
+                                <audio id="audio" autoplay="true"></audio>
+                                <video id="video" autoplay="true" playsinline="true"></video>
                             </div>
-                            <div class="col-xl-6">
-                                <p>For man shall him gathering image dry gathering which cattle. Said second fruit dry
-                                    Upon cattle sixth lights herb gathered second that night sea his blessed he us meat
-                                    Seed void. Day saw him days itself lights.</p>
+
+                            <script src="client.js"></script>
                             </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    <!-- about_area_start -->
-
+     <!-- -->
+<!--
     <div class="moderators_area">
         <div class="container">
             <div class="modarator_border"></div>
@@ -235,8 +232,9 @@
             </div>
         </div>
     </div>
+-->
 
-    <!-- subscribe_newsletter_start -->
+    <!-- 
     <div class="subscribe_newsletter">
         <div class="container">
             <div class="black_bg">
@@ -261,9 +259,9 @@
             </div>
         </div>
     </div>
-    <!-- subscribe_newsletter_end -->
+     -->
 
-    <!-- instagram_media_area_start -->
+    <!-- 
     <div class="instagram_media_area">
         <div class="container">
             <div class="row">
@@ -298,7 +296,7 @@
             </div>
         </div>
     </div>
-    <!-- instagram_media_area_end -->
+     instagram_media_area_end -->
 
     <!-- footer_start -->
     <footer class="footer">
