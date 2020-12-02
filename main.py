@@ -16,7 +16,7 @@ def get_arguments():
 
 
 @app.route("/control")
-def home():
+def control():
     headers = {"key": arguments.nvr_token}
     response = requests.get('https://nvr.miem.hse.ru/api/sources/',
                             headers=headers)
@@ -24,6 +24,9 @@ def home():
     cams.append({'id': 'test','name': 'test'})
     return render_template("control.html", cams=cams)
 
+@app.route("/photo")
+def photo():
+    return render_template('photo.html')
 
 if __name__ == "__main__":
     arguments = get_arguments()

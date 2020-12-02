@@ -36,8 +36,16 @@ video {
     width: 100%;
 }
 
+#photo {
+    width: 100%;
+}
+
 #media {
     max-width: 1280px;
+}
+
+#canvas {
+  display:none;
 }
 </style>
 
@@ -122,186 +130,37 @@ video {
 
 
     <!-- -->
-    {% block content %}
-    <div class="video">
+    <script src="static/js/photo.js"></script>
+    <div class="main">
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-md-6">               
                     <div id="media">
-                        <h2>Player</h2>
+                        <h2>Camera</h2>
                         <audio id="audio" autoplay=></audio>
                         <video id="video" poster="./static/img/poster.png" autoplay muted playsinline></video>
+                        <button id="startbutton">Take photo</button> 
                     </div>
-                    <script src="./static/js/client.js"></script>
-                    
                 </div>
+                <div class="col-xl-6 col-md-6">           
+                    <div id="media">
+                        <h2>Photo</h2>
+                        <canvas id="canvas"></canvas>
+                        <img id="photo" src="./static/img/poster.png" alt="The screen capture will appear in this box.">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="maina">
+        <div class="container">
+            <div class="row">
                 <div class="col-xl-6 col-md-6">
-                    <h2>Media sources</h2>
-                    <select id="cams">
-                        {% for cam in cams %}
-                            <option value="{{cam['id']}}">{{cam['name']}} {{cam['id']}}</option>
-                        {% endfor %}
-                    </select>
-                    <button id="start" onclick="start()">Start</button>
-                    <button id="stop" style="display: none" onclick="stop()">Stop</button>
                 </div>
             </div>
         </div>
     </div>
-    {% endblock %}
      <!-- -->
-<!--
-    <div class="moderators_area">
-        <div class="container">
-            <div class="modarator_border"></div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="modarator_title">
-                        <h3>Our Moderators</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_modarators">
-                        <div class="moderator_thumb">
-                            <img src="img/team/1.png" alt="">
-                            <div class="author_links">
-                                <ul>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-linkedin-square"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="moderator_name">
-                            <h3>Jack Piller</h3>
-                            <p>Photographer at COk</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_modarators">
-                        <div class="moderator_thumb">
-                            <img src="img/team/2.png" alt="">
-                            <div class="author_links">
-                                <ul>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-linkedin-square"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="moderator_name">
-                            <h3>Macau Wilium</h3>
-                            <p>Photographer at COk</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_modarators">
-                        <div class="moderator_thumb">
-                            <img src="img/team/3.png" alt="">
-                            <div class="author_links">
-                                <ul>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-linkedin-square"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="moderator_name">
-                            <h3>Ander Doe</h3>
-                            <p>Photographer at COk</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_modarators">
-                        <div class="moderator_thumb">
-                            <img src="img/team/4.png" alt="">
-                            <div class="author_links">
-                                <ul>
-                                    <li><a href="#"> <i class="fa fa-envelope"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-twitter"></i> </a></li>
-                                    <li><a href="#"> <i class="fa fa-linkedin-square"></i> </a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="moderator_name">
-                            <h3>Clurk Amila</h3>
-                            <p>Photographer at COk</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
-
-    <!-- 
-    <div class="subscribe_newsletter">
-        <div class="container">
-            <div class="black_bg">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <div class="newsletter_text">
-                            <h3>
-                                Subscribe newsletter
-                            </h3>
-                            <p>Get updates to our newsletter and new articles</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="newsform">
-                            <form action="#">
-                                <input type="email" placeholder="Enter Your Email">
-                                <button type="submit">sign up</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     -->
-
-    <!-- 
-    <div class="instagram_media_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="instagram_title text-center">
-                        <i class="fa fa-instagram"></i>
-                        <h3>@photomedia</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_instragram">
-                        <img src="img/instagram/1.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_instragram">
-                        <img src="img/instagram/2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_instragram">
-                        <img src="img/instagram/3.png" alt="">
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-3">
-                    <div class="single_instragram">
-                        <img src="img/instagram/4.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     instagram_media_area_end -->
 
     <!-- footer_start -->
     <footer class="footer">
