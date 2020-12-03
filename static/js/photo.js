@@ -4,12 +4,14 @@
   var canvas = null;
   var photo = null;
   var startbutton = null;
+  var downloadbutton = null;
 
   function startup() {
     video = document.getElementById('video');
     canvas = document.getElementById('canvas');
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
+    downloadbutton = document.getElementById('downloadbutton')
 
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(stream) {
@@ -30,6 +32,11 @@
       takepicture();
       ev.preventDefault();
     }, false);
+
+    downloadbutton.addEventListener('click', function(ev){
+      downloadpicture();
+      ev.preventDefault();
+    }, false);
     
     //clearphoto();
   }
@@ -48,6 +55,25 @@
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
   }
+
+  function download(filename, data) { 
+    //creating an invisible element 
+    var element = document.createElement('a'); 
+    element.setAttribute('href',  data); 
+    element.setAttribute('download', filename); 
+    // Above code is equivalent to 
+    // <a href="path of file" download="file name"> 
+    document.body.appendChild(element); 
+    //onClick property 
+    element.click(); 
+    document.body.removeChild(element); 
+  } 
+
+  function downloadpicture() {
+    var data = canvas.toDataURL('image/png');
+    download('snapshot.png', data)
+  }
+
 
   window.addEventListener('load', startup, false);
 })();
