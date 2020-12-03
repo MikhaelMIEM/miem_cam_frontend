@@ -5,6 +5,8 @@
   var photo = null;
   var startbutton = null;
   var downloadbutton = null;
+  var applyfilterbutton = null;
+  var selectfilter = null;
 
   function startup() {
     video = document.getElementById('video');
@@ -12,6 +14,8 @@
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
     downloadbutton = document.getElementById('downloadbutton')
+    applyfilterbutton = document.getElementById('applyfilterbutton')
+    selectfilter = document.getElementById('selectfilter')
 
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(stream) {
@@ -33,6 +37,11 @@
       ev.preventDefault();
     }, false);
 
+    applyfilterbutton.addEventListener('click', function(ev){
+      var filtername = selectfilter.value.toString()
+      filterphoto(filtername);
+    }, false);
+
     downloadbutton.addEventListener('click', function(ev){
       downloadpicture();
       ev.preventDefault();
@@ -51,6 +60,7 @@
     var context = canvas.getContext('2d');
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
+    //context.filter = 'blur(5px) opacity(0.6)';
     context.drawImage(video, 0, 0);//, video.videoWidth, video.videoHeight);
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
@@ -68,6 +78,14 @@
   function downloadpicture() {
     var data = canvas.toDataURL('image/png');
     download('snapshot.png', data)
+  }
+
+  function filterphoto(filtername) {
+    var context = canvas.getContext('2d');
+    context.filter = filtername;
+    context.drawImage(photo, 0, 0);
+    var data = canvas.toDataURL('image/png');
+    photo.setAttribute('src', data);
   }
 
 
