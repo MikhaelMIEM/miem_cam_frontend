@@ -28,6 +28,10 @@ def control():
 def photo():
     return render_template('photo.html')
 
+@app.route("/")
+def index():
+    return render_template('atata.html')
+
 if __name__ == "__main__":
     arguments = get_arguments()
     # ssl_context = (arguments.ssl_cert, arguments.ssl_key)
