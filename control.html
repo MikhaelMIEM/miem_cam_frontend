@@ -1,11 +1,10 @@
 {% extends "headerfooter.html" %}
 {% block content %}
-<div class="video">
+<div class="welcome_protomedia">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 col-md-6">               
                 <div id="media">
-                    <h2>Player</h2>
                     <audio id="audio" autoplay=></audio>
                     <video id="video" poster="./static/img/poster.png" autoplay muted playsinline></video>
                 </div>
@@ -13,7 +12,6 @@
                 
             </div>
             <div class="col-xl-6 col-md-6">
-                <h2>Media sources</h2>
                 <select id="cams">
                     {% for cam in cams %}
                         <option value="{{cam['id']}}">{{cam['name']}} {{cam['id']}}</option>

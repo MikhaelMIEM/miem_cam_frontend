@@ -46,7 +46,8 @@
       downloadpicture();
       ev.preventDefault();
     }, false);
-    
+
+    //takepicture();
     //clearphoto();
   }
 

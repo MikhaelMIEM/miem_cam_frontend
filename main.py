@@ -30,7 +30,7 @@ def photo():
 
 @app.route("/")
 def index():
-    return render_template('atata.html')
+    return render_template('index.html')
 
 if __name__ == "__main__":
     arguments = get_arguments()
