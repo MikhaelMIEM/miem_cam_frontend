@@ -1,5 +1,25 @@
 {% extends "headerfooter.html" %}
 {% block content %}
+<style>
+    .controlbuttons{
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .button {
+        background-color: #e7e7e7; color: black;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
 <div class="welcome_protomedia">
     <div class="container">
         <div class="row">
@@ -12,13 +32,26 @@
                 
             </div>
             <div class="col-xl-6 col-md-6">
-                <select id="cams">
-                    {% for cam in cams %}
-                        <option value="{{cam['id']}}">{{cam['name']}} {{cam['id']}}</option>
-                    {% endfor %}
-                </select>
-                <button id="start" onclick="start()">Start</button>
-                <button id="stop" style="display: none" onclick="stop()">Stop</button>
+                <div style="width:100%"><div style="margin: 0 auto; text-align: center;"><div>
+                    <select id="cams">
+                        {% for cam in cams %}
+                            <option value="{{cam['id']}}">{{cam['name']}} {{cam['id']}}</option>
+                        {% endfor %}
+                    </select>
+                    <button id="start" class="button" onclick="start(), chosecam()">Start</button>
+                    <button id="stop" class="button" style="display: none" onclick="stop()">Stop</button>
+                <!-- <div class="controlbuttons">     -->
+                    <br>
+                    <script src="./static/js/control.js"></script>
+                    <button id="up" class="button" onclick="up()">↑</button><br>
+                    <button id="left" class="button" onclick="left()">←</button>
+                    <button id="camstop" class="button" onclick="camstop()">stop</button>
+                    <button id="right" class="button" onclick="right()">→</button><br>
+                    <button id="down" class="button" onclick="down()">↓</button>
+                    <br><br>
+                    <button id="zoomin" class="button" onclick="zoomin()">+</button>
+                    <button id="zoomout" class="button" onclick="zoomout()">-</button>
+                </div></div>
             </div>
         </div>
     </div>
