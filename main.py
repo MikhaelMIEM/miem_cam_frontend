@@ -32,6 +32,18 @@ def photo():
 def index():
     return render_template('index.html')
 
+@app.route("/vmix")
+def vmix():
+    return render_template('vmix.html')
+
+@app.route("/vmix_about")
+def vmix_about():
+    return render_template('vmix_about.html')
+
+@app.route("/timesheet")
+def timesheet():
+    return render_template('timesheet.html')
+
 if __name__ == "__main__":
     arguments = get_arguments()
     # ssl_context = (arguments.ssl_cert, arguments.ssl_key)

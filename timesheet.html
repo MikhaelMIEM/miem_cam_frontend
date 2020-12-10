@@ -1,0 +1,391 @@
+{% extends "headerfooter.html" %}
+{% block content %}
+<style>
+    .controlbuttons{
+        margin: 0;
+        position: absolute;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .button {
+        background-color: #e7e7e7; color: black;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+</style>
+
+    <!-- table_start -->
+    <div class="container box_1170">
+        <div class="section-top-border">
+            <h3 class="mb-30">TimeSheet</h3>
+            <div class="progress-table-wrap">
+                <div class="progress-table">
+                    <div class="table-head">
+                        <div class="lesson"></div>
+                        <div class="percentage">Пн</div>
+                        <div class="percentage">Вт</div>
+                        <div class="percentage">Ср</div>
+                        <div class="percentage">Чт</div>
+                        <div class="percentage">Пт</div>
+                        <div class="percentage">Сб</div>
+                        <div class="percentage">Вс</div>
+                    </div>
+                    <div class="table-row">
+                        <div class="serial">09:30 - 10:50</div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit">Пара 1</div>
+                        <div class="visit">Пара 1 (Рус)<br />Лекция онлайн<br /></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                    </div>
+                    
+                    <div class="table-row">
+                        <div class="serial">11:10 - 12:30</div>
+                        <div class="visit">Пара 2</div>
+                        <div class="visit"></div>
+                        <div class="visit">Пара 2</div>
+                        <div class="visit"></div>
+                        <div class="visit">Пара 2</div>
+                        <div class="visit">Пара 2 (Рус)<br />Лекция онлайн<br /></div>
+                        <div class="visit"></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="serial">13:00 - 14:20</div>
+                        <div class="visit">Пара 3</div>
+                        <div class="visit"></div>
+                        <div class="visit">Пара 3</div>
+                        <div class="visit"></div>
+                        <div class="visit">Пара 3</div>
+                        <div class="visit">Пара 3 (Рус)<br />Лекция онлайн<br /></div>
+                        <div class="visit"></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="serial">14:40 - 16:00</div>
+                        <div class="visit">
+                            <ul>
+                                <li><a class='les-title'>Разработка Веб-приложения (Рус)</a></li>
+                                <li><a class='les-type'>Лекция-онлайн</a></li>
+                                <li><a class='les-dir'>123 (Таллинская ул., д.34)</a></li>
+                                <li><a class='les-teach'>проф. Трубочкина Надежда Константиновна</a></li>
+                                <li><a class='les-link'>meet.miem.hse.ru/123</a></li>
+                            </ul>
+
+                        </div>
+                        <div class="visit">Пара 4</div>
+                        <div class="visit">Пара 4</div>
+                        <div class="visit"></div>
+                        <div class="visit">Пара 4</div>
+                        <div class="visit"><h4>Пара 4 (Рус)<br />Лекция онлайн<br /></h4></div>
+                        <div class="visit"></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="serial">16:20 - 18:40</div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                    </div>
+                    <div class="table-row">
+                        <div class="serial">19:00 - 20:20</div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                        <div class="visit"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- table_stop -->
+
+    <!-- photography_slider_area_start -->
+    <div class="photography_slider_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="photoslider_active owl-carousel">
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/1_timesheet.png" alt="">
+                            <div class="photo_title">
+                                <h4>НТИ</h4>
+                            </div>
+                        </div>
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/2_timesheet.jpg" alt="">
+                            <div class="photo_title">
+                                <h4>Карта</h4>
+                            </div>
+                        </div>
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/3_timesheet.jpg" alt="">
+                            <div class="photo_title">
+                                <h4>МатФак</h4>
+                            </div>
+                        </div>
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/4_timesheet.jpg" alt="">
+                            <div class="photo_title">
+                                <h4>Лекции</h4>
+                            </div>
+                        </div>
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/5_timesheet.jpg" alt="">
+                            <div class="photo_title">
+                                <h4>Исследования</h4>
+                            </div>
+                        </div>
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/6_timesheet.png" alt="">
+                            <div class="photo_title">
+                                <h4>VMix</h4>
+                            </div>
+                        </div>
+                        <div class="single_photography">
+                            <img src="static/img/timesheet/7_timesheet.jpg" alt="">
+                            <div class="photo_title">
+                                <h4>Обмен опытом</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- photography_slider_area_end -->
+
+    <!-- most_recent_blog_start -->
+    <div class="most_recent_blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title mb-33">
+                        <h3>Most Recent</h3>
+                    </div>
+                </div>
+                <div class="col-xl-8 col-md-8">
+                    <div class="row">
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a href="#">
+                                        <img src="static/img/timesheet/5.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_meta">
+                                    <p><a href="#">Photography I 24 May 2019</a></p>
+                                    <h3><a href="#">
+                                            Скоро  октроется запись <br>
+                                            на студентческие Олимпиады
+                                        </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a href="#">
+                                        <img src="static/img/timesheet/6.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_meta">
+                                    <p><a href="#">Photography I 24 May 2019</a></p>
+                                    <h3><a href="#">
+                                            День открытых дверей <br>
+                                            HSE ART AND DESIGN
+                                        </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a href="#">
+                                        <img src="static/img/timesheet/7.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_meta">
+                                    <p><a href="#">Photography I 24 May 2019</a></p>
+                                    <h3><a href="#">
+                                            Книги и советы по  <br>
+                                            структуированию текстов
+                                        </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a href="#">
+                                        <img src="static/img/timesheet/8.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_meta">
+                                    <p><a href="#">Photography I 24 May 2019</a></p>
+                                    <h3><a href="#">
+                                            МИЭФ снова оказался <br>
+                                            самым дорогим факультетом
+                                        </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a href="#">
+                                        <img src="static/img/timesheet/9.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_meta">
+                                    <p><a href="#">Photography I 24 May 2019</a></p>
+                                    <h3><a href="#">
+                                            UI/UX <br>
+                                            Design
+                                        </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6">
+                            <div class="single_blog">
+                                <div class="blog_thumb">
+                                    <a href="#">
+                                        <img src="static/img/timesheet/10.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="blog_meta">
+                                    <p><a href="#">Photography I 24 May 2019</a></p>
+                                    <h3><a href="#">
+                                            Библиотека на Покровке <br> 
+                                            снова открыта
+                                        </a></h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="btn_area text-center">
+                                <a href="#" class="boxed-btn">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="blog_right_side">
+                        <div class="section_title mb-33">
+                            <h3>Follow Us</h3>
+                        </div>
+                        <div class="foollow_links">
+                            <ul class="d-flex align-items-center justify-content-between">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-facebook"></i>
+                                        <h2>142K</h2>
+                                        <p>followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="insta" href="#">
+                                        <i class="fa fa-instagram"></i>
+                                        <h2>142K</h2>
+                                        <p>followers</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="#">
+                                        <i class="fa fa-twitter"></i>
+                                        <h2>142K</h2>
+                                        <p>followers</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="add_here text-center">
+                            <a href="#">
+                                    <img src="static/img/timesheet/12.jpg" alt="">
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <!-- most_recent_blog_end -->
+
+    <!-- subscribe_newsletter_start -->
+    <div class="subscribe_newsletter">
+        <div class="container">
+            <div class="black_bg">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="newsletter_text">
+                            <h3>
+                                Subscribe newsletter
+                            </h3>
+                            <p>Get updates to our newsletter and new articles</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="newsform">
+                            <form action="#">
+                                <input type="email" placeholder="Enter Your Email">
+                                <button type="submit">sign up</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- subscribe_newsletter_end -->
+
+    <!-- instagram_media_area_start -->
+    <div class="instagram_media_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="instagram_title text-center">
+                        <i class="fa fa-instagram"></i>
+                        <h3>@MIEMapp</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-3 col-md-3">
+                    <div class="single_instragram">
+                        <img src="static/img/timesheet/4.png" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="single_instragram">
+                        <img src="static/img/timesheet/1.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="single_instragram">
+                        <img src="static/img/timesheet/2.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-3">
+                    <div class="single_instragram">
+                        <img src="static/img/timesheet/3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+{% endblock %}

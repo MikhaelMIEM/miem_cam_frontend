@@ -38,22 +38,25 @@
                             <option value="{{cam['id']}}">{{cam['name']}} {{cam['id']}}</option>
                         {% endfor %}
                     </select>
-                    <button id="start" class="button" onclick="start(), chosecam()">Start</button>
-                    <button id="stop" class="button" style="display: none" onclick="stop()">Stop</button>
+                    <button id="start" class="genric-btn default" onclick="start(), chosecam()">Start</button>
+                    <button id="stop" class="genric-btn default" style="display: none" onclick="stop()">Stop</button>
                 <!-- <div class="controlbuttons">     -->
-                    <br>
-                    <script src="./static/js/control.js"></script>
-                    <button id="up" class="button" onclick="up()">↑</button><br>
-                    <button id="left" class="button" onclick="left()">←</button>
-                    <button id="camstop" class="button" onclick="camstop()">stop</button>
-                    <button id="right" class="button" onclick="right()">→</button><br>
-                    <button id="down" class="button" onclick="down()">↓</button>
-                    <br><br>
-                    <button id="zoomin" class="button" onclick="zoomin()">+</button>
-                    <button id="zoomout" class="button" onclick="zoomout()">-</button>
+                    <div class="button-group-area">
+                        <br>
+                        <script src="./static/js/control.js"></script>
+                        <button id="up" class="genric-btn default" onclick="up()">↑</button><br>
+                        <button id="left" class="genric-btn default" onclick="left()">←</button>
+                        <button id="camstop" class="genric-btn default" onclick="camstop()">stop</button>
+                        <button id="right" class="genric-btn default" onclick="right()">→</button><br>
+                        <button id="down" class="genric-btn default" onclick="down()">↓</button>
+                        <br><br>
+                        <button id="zoomin" class="genric-btn default" onclick="zoomin()">+</button>
+                        <button id="zoomout" class="genric-btn default" onclick="zoomout()">-</button>
+                    </div>
                 </div></div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
