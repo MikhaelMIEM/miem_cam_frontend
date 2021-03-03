@@ -1,5 +1,5 @@
 var controlserver = "http://19111.miem.vmnet.top";
-var key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZXN0XzFAZW1haWwuY29tIiwiZXhwIjoxNjA4MTQyMjkwfQ.1K7A7wS8UaXleXIbH3TX8zmWe1s5oyUMZgjPk6stNY4";
+var key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmt1cmtpbkBtaWVtLmhzZS5ydSIsImV4cCI6MTYxNDIwMDcxMH0.cm-DohIIPQ65IZGoFiePPjMFF_oahXSBQyLnxujfBTA";
 
 function up() {
 

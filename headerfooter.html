@@ -43,6 +43,13 @@ video {
 #media {
     max-width: 1280px;
 }
+.nadpis {
+    position:absolute;
+    top:3%;
+    left:5%;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 
 #canvas {
   display:none;
@@ -66,23 +73,23 @@ video {
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="/timesheet">Timesheet <i class="ti-angle-down"></i></a>
+                                        <li><a href="/">Главная</a></li>
+                                        <li><a href="/timesheet">Расписание<i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
-                                                <li><a href="/timesheet">Grid</a></li>
-                                                <li><a href="/timesheet_mono">Mono</a></li>
+                                                <li><a href="/timesheet">Сетка</a></li>
+                                                <li><a href="/timesheet_mono">Список</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="active" href="control">Control</a></li>
+                                        <li><a class="active" href="control">Камеры</a></li>
                                         <li><a href="/vmix_about">VMIX <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
                                                 <li><a href="/vmix_about">About VMIX</a></li>
                                                 <li><a href="/vmix">VmixControl</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="photo">Photo</a></li>
-                                        <li><a href="login_overlay.html">Log In</a></li>
-                                        <li><a href="signin_overlay.html">Sign In</a></li>
+                                        <li><a href="photo">Фоторедактор</a></li>
+                                        <li><a href="hw7">Лекции</a></li>
+                                        <!-- <li><a href="signin_overlay.html">Sign In</a></li> -->
                                     </ul>
                                 </nav>
                             </div>
@@ -101,37 +108,21 @@ video {
 
     {% endblock %}
 
-    <!-- footer_start -->
-    <footer class="footer">
+
+    <!-- <footer class="footer">
         <div class="footer_bottom ">
-            <!-- <div class="container">
-                <div class="footer_border">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="footer_links text-center">
-                                <ul>
-                                    <li><a href="index.html">home</a></li>
-                                    <li><a href="catagory.html">timesheet</a></li>
-                                    <li><a href="about.html">control</a></li>
-                                    <li><a href="contact.html">vmix</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
             <div class="copyright_text text-center">
                 <p>
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This site is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/WonnieThepoo" target="_blank">Alexander Kurkin and Mikhail Nikolenko</a>
                 </p>
             </div>
         </div>
-    </footer>
+    </footer> -->
     <!-- footer_end -->
 
 
     <!-- JS here -->
-    <script src="static/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- <script src="static/js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="static/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
@@ -147,7 +138,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="static/js/nice-select.min.js"></script>
     <script src="static/js/jquery.slicknav.min.js"></script>
     <script src="static/js/jquery.magnific-popup.min.js"></script>
-    <script src="static/js/plugins.js"></script>
+    <script src="static/js/plugins.js"></script> -->
 
     <!--contact js-->
     <script src="static/js/contact.js"></script>

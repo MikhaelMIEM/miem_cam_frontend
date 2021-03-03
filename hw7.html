@@ -1,0 +1,103 @@
+{% extends "headerfooter.html" %}
+{% block content %}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="./static/js/graphs.js"></script>
+
+
+<br><br>
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-md-6">
+                <div id="pie_div"></div>
+                
+
+            </div>
+            <div class="col-xl-6 col-md-6">
+                <div id="graph_div"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-xl-6 col-md-6">
+            <select id="choseform">
+                <option value="teacher">teacher</option>
+                <option value="auditory">auditory</option>
+                <option value="lesson">lesson</option>
+                <option value="knaps">knapsack</option>
+            </select>
+            <button id="click" onclick="show()">Show form</button>
+            <br><hr><br>
+            <script type="text/javascript">
+                function show() {
+                    var forms = ["teacher", "auditory", "lesson", "knaps"];
+                    forms.forEach(element => document.getElementById(element).hidden=true);
+                    if (document.getElementById(document.getElementById("choseform").value).hidden == true) {
+                        document.getElementById(document.getElementById("choseform").value).hidden = false;
+                    }
+                }
+            </script>
+
+            <form action="/auditory" method="POST" hidden="hidden" id="auditory">
+                <input type="number" name="auditory" value="520"> Аудитория<br><br>
+                <input type="number" name="capacity" value="60"> Вместимость<br><br>
+                <input type="checkbox" name="microphone"> Микрофон<br><br>
+                <input type="checkbox" name="projector"> Проектор<br><br>
+                <input type="checkbox" name="board"> Доска<br><br>
+                <input type="checkbox" name="computer"> Компьютер<br><br>
+                <p><input type="submit"></p>
+            </form>
+
+            <form action="/teacher" method="POST" id="teacher">
+                <input type="text" name="name" value="Maria"> Преподаватель<br><br>
+                <p><input type="submit"></p>
+            </form>
+
+            <form action="/lesson" method="POST" id="lesson" hidden="hidden">
+                <select name="teacher" form="lesson">
+                    {% for teacher in teachers %}
+                        <option value="{{teacher['id']}}">{{teacher['name']}}</option>
+                    {% endfor %}
+                </select> Преподаватель<br><br>
+                <select name="auditory" form="lesson">
+                    {% for auditory in auditories %}
+                        <option value="{{auditory['id']}}">{{auditory['id']}}</option>
+                    {% endfor %}
+                </select> Аудитория<br><br>
+                <input type="number" name="number" min="1" max="8" value="1"> Номер пары<br><br>
+                <input type="date" name="date"> Дата<br><br>
+                <p><input type="submit"></p>
+            </form>
+
+            <div id="knaps" hidden="hiden">
+                <input type="number" id="knapsack_max" value="200">
+                <button id="click" onclick="knapsack()">Evaluate</button>
+                <br>
+                <p id="knap_ans">Answer</p>
+                <script type="text/javascript">
+                    function knapsack() {
+                        fetch('/knapsack?max_cap=' + document.getElementById("knapsack_max").value)
+                        .then(res => res.json())
+                        .then((out) => {
+                            console.log('Output: ', out["data"]);
+                            document.getElementById("knap_ans").innerHTML = out["data"];
+                        })
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="col-xl-6 col-md-6">
+            <div id="table_div"></div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+{% endblock %}

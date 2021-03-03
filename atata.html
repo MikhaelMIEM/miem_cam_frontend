@@ -1,0 +1,33 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+<script src="static/js/kurento-utils.js"></script>
+<script src="static/js/index.js"></script>
+
+<title>Minimal client</title>
+</head>
+<body>
+
+	<br>
+	
+		<button onclick="start()" id="start">start</button>
+		<button onclick="stop()" id="stop">stop</button> 
+		
+
+
+	<br>
+	<input type="text" id="videourl"
+		value="rtsp://172.18.200.54:554/Streaming/Channels/1"
+		style="width: 100%">
+
+
+	<br>
+
+	<div id="videoBig">
+		<video id="video" autoplay muted playsinline width="640px" height="480px"
+			poster="img/webrtc.png"></video>
+	</div>
+
+</body>
+</html>
